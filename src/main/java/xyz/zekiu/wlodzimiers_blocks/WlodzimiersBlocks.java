@@ -16,11 +16,11 @@ import xyz.zekiu.wlodzimiers_blocks.items.KitchenTilesItem;
 
 public class WlodzimiersBlocks implements ModInitializer {
     public static final String MOD_ID = "wlodzimiers_blocks";
-    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+    public static final Logger LOGGER = LoggerFactory.getLogger("WlodzimiersBlocks");
     @Override
     public void onInitialize() {
-        PolymerResourcePackUtils.markAsRequired();
         PolymerResourcePackUtils.addModAssets("wlodzimiers_blocks");
+        PolymerResourcePackUtils.markAsRequired();
         register(BlockModelType.FULL_BLOCK,"kitchen_tiles");
         LOGGER.info("Wlodzimiers Blocks zostało załadowane miaał");
     }
