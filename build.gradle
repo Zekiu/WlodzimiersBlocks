@@ -12,7 +12,7 @@ repositories {
     // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
     // See https://docs.gradle.org/current/userguide/declaring_repositories.html
     // for more information about repositories.
-//    maven { url 'https://maven.nucleoid.xyz' }
+    maven { url 'https://maven.nucleoid.xyz' }
 }
 
 dependencies {
@@ -24,9 +24,9 @@ dependencies {
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
     // Polymer
-//    modImplementation include("eu.pb4:polymer-core:0.5.18+1.20.1")
-//    modImplementation include("eu.pb4:polymer-resource-pack:0.5.18+1.20.1")
-//    modImplementation include("eu.pb4:polymer-blocks:0.5.18+1.20.1")
+    modImplementation include("eu.pb4:polymer-core:0.5.18+1.20.1")
+    modImplementation include("eu.pb4:polymer-resource-pack:0.5.18+1.20.1")
+    modImplementation include("eu.pb4:polymer-blocks:0.5.18+1.20.1")
 }
 
 processResources {
@@ -73,18 +73,18 @@ jar {
 }
 
 // configure the maven publication
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            from components.java
-        }
-    }
-
-    // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
-    repositories {
-        // Add repositories to publish to here.
-        // Notice: This block does NOT have the same function as the block in the top level.
-        // The repositories here will be used for publishing your artifact, not for
-        // retrieving dependencies.
-    }
-}
+//publishing {
+//    publications {
+//        mavenJava(MavenPublication) {
+//            from components.java
+//        }
+//    }
+//
+//    // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
+//    repositories {
+//        // Add repositories to publish to here.
+//        // Notice: This block does NOT have the same function as the block in the top level.
+//        // The repositories here will be used for publishing your artifact, not for
+//        // retrieving dependencies.
+//    }
+//}
