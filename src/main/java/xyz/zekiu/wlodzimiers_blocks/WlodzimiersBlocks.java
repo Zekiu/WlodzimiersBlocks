@@ -14,5 +14,6 @@ public class WlodzimiersBlocks implements ModInitializer {
     public void onInitialize() {
         ModBlocks.registerModBlocks();
         ModItemGroup.registerItemGroups();
+        LOGGER.info("Wlodzimiers Blocks zostało załadowane miaał");
     }
 }
