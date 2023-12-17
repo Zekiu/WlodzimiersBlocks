@@ -25,6 +25,6 @@ public class ModBlocks {
     }
 
     public static void registerModBlocks() {
-        WlodzimiersBlocks.LOGGER.info("Registering Mod Blocks for " + WlodzimiersBlocks.MOD_ID);
+        WlodzimiersBlocks.LOGGER.info("Bloki zostały zarejestrowane miaał");
     }
 }
