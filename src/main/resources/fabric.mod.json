@@ -3,7 +3,7 @@
   "id": "wlodzimiers_blocks",
   "version": "${version}",
   "name": "Wlodzimiers Blocks",
-  "description": "Wlodzimiers Blocks is a server-side mod that adds some custom block using Polymer",
+  "description": "Wlodzimiers Blocks is a server-side mod that adds some custom blocks using Polymer",
   "authors": [
     "Zekiu",
     "selnov"
