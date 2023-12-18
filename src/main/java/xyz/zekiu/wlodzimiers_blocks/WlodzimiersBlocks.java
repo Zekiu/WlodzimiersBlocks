@@ -19,7 +19,7 @@ public class WlodzimiersBlocks implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger("WlodzimiersBlocks");
     @Override
     public void onInitialize() {
-        PolymerResourcePackUtils.addModAssets("wlodzimiers_blocks");
+        PolymerResourcePackUtils.addModAssets(MOD_ID);
         PolymerResourcePackUtils.markAsRequired();
         register(BlockModelType.FULL_BLOCK,"kitchen_tiles");
         LOGGER.info("Wlodzimiers Blocks zostało załadowane miaał");
