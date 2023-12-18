@@ -3,16 +3,10 @@ package xyz.zekiu.wlodzimiers_blocks;
 import eu.pb4.polymer.blocks.api.BlockModelType;
 import eu.pb4.polymer.resourcepack.api.PolymerResourcePackUtils;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Blocks;
-import net.minecraft.item.Item;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import xyz.zekiu.wlodzimiers_blocks.blocks.KitchenTilesBlock;
-import xyz.zekiu.wlodzimiers_blocks.items.KitchenTilesItem;
+import xyz.zekiu.wlodzimiers_blocks.blocks.SimpleCustomBlock;
 
 public class WlodzimiersBlocks implements ModInitializer {
     public static final String MOD_ID = "wlodzimiers_blocks";
@@ -21,14 +15,10 @@ public class WlodzimiersBlocks implements ModInitializer {
     public void onInitialize() {
         PolymerResourcePackUtils.addModAssets(MOD_ID);
         PolymerResourcePackUtils.markAsRequired();
-        register(BlockModelType.FULL_BLOCK,"kitchen_tiles");
-        LOGGER.info("Wlodzimiers Blocks zostało załadowane miaał");
-    }
-    public static void register(BlockModelType type, String modelId) {
-        var id = new Identifier(MOD_ID, modelId);
-        var block = Registry.register(Registries.BLOCK, id,
-                new KitchenTilesBlock(FabricBlockSettings.copy(Blocks.BLACK_CONCRETE), type, modelId));
 
-        Registry.register(Registries.ITEM, id, new KitchenTilesItem(new Item.Settings(), block, modelId));
+        SimpleCustomBlock.register("kitchen_tiles", BlockModelType.FULL_BLOCK, Blocks.BLACK_CONCRETE);
+//      SimpleCustomBlock.register("id_bloku", BlockModelType.KSZTALT_BLOKU, Blocks.WLASCIWOSCI_BLOKU_VANILLA);   ||| DLA PROSTYCH BLOKÓW!!! Pamiętaj aby dodać potrzebne pliki .json w folderze assets oraz data!!!!
+
+        LOGGER.info("Wlodzimiers Blocks zostało załadowane miaał");
     }
 }

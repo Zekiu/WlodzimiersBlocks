@@ -12,13 +12,12 @@ import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.Nullable;
 import xyz.zekiu.wlodzimiers_blocks.WlodzimiersBlocks;
 
-public class KitchenTilesItem extends BlockItem implements eu.pb4.polymer.core.api.item.PolymerItem {
+public class SimpleCustomItem extends BlockItem implements eu.pb4.polymer.core.api.item.PolymerItem {
     private final PolymerModelData polymerModel;
 
-    public KitchenTilesItem(Settings settings, Block block, String modelId) {
+    public SimpleCustomItem(Settings settings, Block block, String modelId) {
         super(block, settings);
         this.polymerModel = PolymerResourcePackUtils.requestModel(Items.BARRIER, new Identifier(WlodzimiersBlocks.MOD_ID, modelId));
-
     }
 
     @Override
