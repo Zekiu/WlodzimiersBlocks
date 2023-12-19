@@ -1,4 +1,17 @@
 {
   "itemgroup.wlodzimiers_blocks": "Wlodzimiers Blocks",
-  "block.wlodzimiers_blocks.kitchen_tiles": "Kitchen Tiles"
+  "block.wlodzimiers_blocks.black_kitchen_tiles": "Black Kitchen Tiles",
+  "block.wlodzimiers_blocks.brown_kitchen_tiles": "Brown Kitchen Tiles",
+  "block.wlodzimiers_blocks.cyan_kitchen_tiles": "Cyan Kitchen Tiles",
+  "block.wlodzimiers_blocks.gray_kitchen_tiles": "Gray Kitchen Tiles",
+  "block.wlodzimiers_blocks.green_kitchen_tiles": "Green Kitchen Tiles",
+  "block.wlodzimiers_blocks.light_blue_kitchen_tiles": "Light Blue Kitchen Tiles",
+  "block.wlodzimiers_blocks.light_gray_kitchen_tiles": "Light Gray Kitchen Tiles",
+  "block.wlodzimiers_blocks.lime_kitchen_tiles": "Lime Kitchen Tiles",
+  "block.wlodzimiers_blocks.magenta_kitchen_tiles": "Magenta Kitchen Tiles",
+  "block.wlodzimiers_blocks.orange_kitchen_tiles": "Orange Kitchen Tiles",
+  "block.wlodzimiers_blocks.pink_kitchen_tiles": "Pink Kitchen Tiles",
+  "block.wlodzimiers_blocks.purple_kitchen_tiles": "Purple Kitchen Tiles",
+  "block.wlodzimiers_blocks.red_kitchen_tiles": "Red Kitchen Tiles",
+  "block.wlodzimiers_blocks.yellow_kitchen_tiles": "Yellow Kitchen Tiles"
 }

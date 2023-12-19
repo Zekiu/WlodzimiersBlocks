@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "wlodzimiers_blocks:kitchen_tiles"
+          "name": "wlodzimiers_blocks:black_kitchen_tiles"
         }
       ],
       "rolls": 1.0

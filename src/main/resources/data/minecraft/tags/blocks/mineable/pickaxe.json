@@ -1,6 +1,20 @@
 {
   "replace": false,
   "values": [
-    "wlodzimiers_blocks:kitchen_tiles"
+    "wlodzimiers_blocks:black_kitchen_tiles",
+    "wlodzimiers_blocks:blue_kitchen_tiles",
+    "wlodzimiers_blocks:brown_kitchen_tiles",
+    "wlodzimiers_blocks:cyan_kitchen_tiles",
+    "wlodzimiers_blocks:gray_kitchen_tiles",
+    "wlodzimiers_blocks:green_kitchen_tiles",
+    "wlodzimiers_blocks:light_blue_kitchen_tiles",
+    "wlodzimiers_blocks:light_gray_kitchen_tiles",
+    "wlodzimiers_blocks:lime_kitchen_tiles",
+    "wlodzimiers_blocks:magenta_kitchen_tiles",
+    "wlodzimiers_blocks:orange_kitchen_tiles",
+    "wlodzimiers_blocks:pink_kitchen_tiles",
+    "wlodzimiers_blocks:purple_kitchen_tiles",
+    "wlodzimiers_blocks:red_kitchen_tiles",
+    "wlodzimiers_blocks:yellow_kitchen_tiles"
   ]
 }

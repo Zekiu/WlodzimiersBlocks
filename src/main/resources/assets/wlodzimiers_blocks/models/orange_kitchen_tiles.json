@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "wlodzimiers_blocks:block/orange_kitchen_tiles"
+  }
+}
