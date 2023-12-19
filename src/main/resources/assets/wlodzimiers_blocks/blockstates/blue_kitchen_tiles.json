@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "wlodzimiers_blocks:block/kitchen_tiles"
+      "model": "wlodzimiers_blocks:block/blue_kitchen_tiles"
     }
   }
 }
