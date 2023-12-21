@@ -4,7 +4,7 @@ Wlodzimiers Blocks is a server-side mod that **plans to add** various custom blo
 
 ---
 
-Currently, it only adds one block, Kitchen Tiles, which you can see in the gallery tab on <a href="https://modrinth.com/mod/wlodzimiers-blocks">Modrinth</a>.
+Currently, it adds Kitchen Tiles, which you can see in the <a href="https://modrinth.com/mod/wlodzimiers-blocks/gallery">gallery</a> tab. They're made with concrete blocks.
 
 We plan on adding many new blocks, so stay tuned for that!
 
