@@ -26,10 +26,10 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
     // Polymer
-    modImplementation "eu.pb4:polymer-core:0.5.19+1.20.1"
-    modImplementation "eu.pb4:polymer-resource-pack:0.5.19+1.20.1"
-    modImplementation "eu.pb4:polymer-blocks:0.5.19+1.20.1"
-    modImplementation "eu.pb4:polymer-autohost:0.5.19+1.20.1"
+    modImplementation "eu.pb4:polymer-core:0.6.3+1.20.2"
+    modImplementation "eu.pb4:polymer-resource-pack:0.6.3+1.20.2"
+    modImplementation "eu.pb4:polymer-blocks:0.6.3+1.20.2"
+    modImplementation "eu.pb4:polymer-autohost:0.6.3+1.20.2"
 }
 
 processResources {
