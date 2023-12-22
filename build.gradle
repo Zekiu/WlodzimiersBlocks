@@ -97,7 +97,5 @@ modrinth {
     token = System.getenv("MODRINTH_TOKEN")
     projectId = "wlodzimiers-blocks"
     uploadFile = remapJar
-    dependencies {
-        embedded.project "polymer"
-    }
+    changelog = rootProject.file("CHANGELOG").text
 }
