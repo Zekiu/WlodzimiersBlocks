@@ -93,7 +93,7 @@ jar {
 //}
 modrinth {
     versionName = "Wlodzimiers Blocks " + project.mod_version + " - " + project.minecraft_version
-    version = project.mod_version
+    versionNumber = project.mod_version
     token = System.getenv("MODRINTH_TOKEN")
     projectId = "wlodzimiers-blocks"
     uploadFile = remapJar
