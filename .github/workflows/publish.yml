@@ -9,8 +9,6 @@ jobs:
     steps:
       - name: Checkout Commit
         uses: actions/checkout@v4
-        with:
-          submodules: recursive
       - name: Fetch Tags
         run: git fetch --unshallow --tags -f
       - name: Set up JDK
@@ -18,9 +16,9 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
       - name: Publish Modrinth Jar
         env:
           MODRINTH_KEY: ${{ secrets.MODRINTH_KEY }}
-        uses: eskatos/gradle-command-action@v1
-        with:
-          arguments: modrinth
+        run: ./gradlew modrinth
