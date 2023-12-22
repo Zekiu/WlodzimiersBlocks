@@ -1,0 +1,20 @@
+name: Check Wlodzimiers Blocks
+on:
+  - push
+jobs:
+  gradle:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Commit
+        uses: actions/checkout@v4
+      - name: Fetch Tags
+        run: git fetch --unshallow --tags -f
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+      - name: Check Build
+        run: ./gradlew check
