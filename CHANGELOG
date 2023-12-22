@@ -1,0 +1,4 @@
+Changes:
+
+- Lowered Fabric Loader requirement and removed Polymer as embedded mod
+  - You now need to install Polymer separately!!!
