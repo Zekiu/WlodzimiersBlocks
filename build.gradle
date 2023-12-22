@@ -25,10 +25,10 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
     // Polymer
-    modImplementation include("eu.pb4:polymer-core:0.7.4+1.20.4")
-    modImplementation include("eu.pb4:polymer-resource-pack:0.7.4+1.20.4")
-    modImplementation include("eu.pb4:polymer-blocks:0.7.4+1.20.4")
-    modImplementation include("eu.pb4:polymer-autohost:0.7.4+1.20.4")
+    modImplementation "eu.pb4:polymer-core:0.7.4+1.20.4"
+    modImplementation "eu.pb4:polymer-resource-pack:0.7.4+1.20.4"
+    modImplementation "eu.pb4:polymer-blocks:0.7.4+1.20.4"
+    modImplementation "eu.pb4:polymer-autohost:0.7.4+1.20.4"
 }
 
 processResources {
@@ -90,3 +90,13 @@ jar {
 //        // retrieving dependencies.
 //    }
 //}
+modrinth {
+    versionName = "Wlodzimiers Blocks " + project.mod_version + " - " + project.minecraft_version
+    version = project.mod_version
+    token = System.getenv("MODRINTH_TOKEN")
+    projectId = "wlodzimiers-blocks"
+    uploadFile = remapJar
+    dependencies {
+        embedded.project "polymer"
+    }
+}
