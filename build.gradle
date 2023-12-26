@@ -1,7 +1,7 @@
 plugins {
     id 'fabric-loom' version '1.4-SNAPSHOT'
-    id 'maven-publish'
     id 'com.modrinth.minotaur' version '2.+'
+    id 'io.github.CDAGaming.cursegradle' version '1.6.1'
 }
 
 version = project.mod_version + "+" + project.minecraft_version
@@ -66,7 +66,7 @@ java {
     // Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
     // if it is present.
     // If you remove this line, sources will not be generated.
-    withSourcesJar()
+    // withSourcesJar()
 }
 
 jar {
@@ -75,22 +75,6 @@ jar {
     }
 }
 
-// configure the maven publication
-//publishing {
-//    publications {
-//        mavenJava(MavenPublication) {
-//            from components.java
-//        }
-//    }
-//
-//    // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
-//    repositories {
-//        // Add repositories to publish to here.
-//        // Notice: This block does NOT have the same function as the block in the top level.
-//        // The repositories here will be used for publishing your artifact, not for
-//        // retrieving dependencies.
-//    }
-//}
 modrinth {
     versionName = "Wlodzimiers Blocks " + project.mod_version + " - " + project.minecraft_version
     versionNumber = project.mod_version
@@ -98,4 +82,23 @@ modrinth {
     projectId = "wlodzimiers-blocks"
     uploadFile = remapJar
     changelog = rootProject.file("CHANGELOG").text
+}
+
+curseforge {
+    apiKey = System.getenv("CURSEFORGE_API_KEY")
+    project {
+        id = '952794'
+        changelogType = 'markdown'
+        changelog = rootProject.file("CHANGELOG").text
+        releaseType = 'release'
+        addGameVersion project.minecraft_version
+
+        mainArtifact(remapJar) {
+            it.displayName = "Wlodzimiers Blocks " + project.mod_version + " - " + project.minecraft_version
+        }
+
+        options {
+            debug = true
+        }
+    }
 }
