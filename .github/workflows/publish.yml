@@ -18,7 +18,11 @@ jobs:
           java-version: '17'
       - name: Make gradlew executable
         run: chmod +x ./gradlew
-      - name: Publish Modrinth Jar
+      - name: Publish Jar to Modrinth
         env:
           MODRINTH_TOKEN: ${{secrets.MODRINTH_TOKEN}}
         run: ./gradlew modrinth
+      - name: Publish Jar to CurseForge
+        env:
+          CURSEFORGE_API_KEY: ${{secrets.CURSEFORGE_API_KEY}}
+        run: ./gradlew curseforge
