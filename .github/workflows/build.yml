@@ -17,4 +17,7 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x ./gradlew
       - name: Check Build
+        env:
+          MODRINTH_TOKEN: ${{secrets.MODRINTH_TOKEN}}
+          CURSEFORGE_API_KEY: ${{secrets.CURSEFORGE_API_KEY}}
         run: ./gradlew check

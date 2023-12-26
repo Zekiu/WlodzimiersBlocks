@@ -85,8 +85,8 @@ modrinth {
 }
 
 curseforge {
-    apiKey = System.getenv("CURSEFORGE_API_KEY")
     project {
+        apiKey = System.getenv("CURSEFORGE_API_KEY")
         id = '952794'
         changelogType = 'markdown'
         changelog = rootProject.file("CHANGELOG").text
