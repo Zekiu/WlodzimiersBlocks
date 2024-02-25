@@ -1,5 +1,6 @@
 package xyz.zekiu.wlodzimiers_blocks.items;
 
+import eu.pb4.polymer.core.api.item.PolymerItem;
 import eu.pb4.polymer.resourcepack.api.PolymerModelData;
 import eu.pb4.polymer.resourcepack.api.PolymerResourcePackUtils;
 import net.minecraft.block.Block;
@@ -12,10 +13,10 @@ import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.Nullable;
 import xyz.zekiu.wlodzimiers_blocks.WlodzimiersBlocks;
 
-public class SimpleCustomItem extends BlockItem implements eu.pb4.polymer.core.api.item.PolymerItem {
+public class SimpleCustomBlockItem extends BlockItem implements PolymerItem{
     private final PolymerModelData polymerModel;
 
-    public SimpleCustomItem(Settings settings, Block block, String modelId) {
+    public SimpleCustomBlockItem(Settings settings, Block block, String modelId) {
         super(block, settings);
         this.polymerModel = PolymerResourcePackUtils.requestModel(Items.BARRIER, new Identifier(WlodzimiersBlocks.MOD_ID, modelId));
     }
