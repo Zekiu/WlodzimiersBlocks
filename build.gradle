@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.4-SNAPSHOT'
+    id 'fabric-loom' version '1.5-SNAPSHOT'
     id 'com.modrinth.minotaur' version '2.+'
     id 'io.github.CDAGaming.cursegradle' version '1.6.1'
 }
@@ -26,10 +26,10 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
     // Polymer
-    modImplementation "eu.pb4:polymer-core:0.7.4+1.20.4"
-    modImplementation "eu.pb4:polymer-resource-pack:0.7.4+1.20.4"
-    modImplementation "eu.pb4:polymer-blocks:0.7.4+1.20.4"
-    modImplementation "eu.pb4:polymer-autohost:0.7.4+1.20.4"
+    modImplementation "eu.pb4:polymer-core:0.7.6+1.20.4"
+    modImplementation "eu.pb4:polymer-resource-pack:0.7.6+1.20.4"
+    modImplementation "eu.pb4:polymer-blocks:0.7.6+1.20.4"
+    modImplementation "eu.pb4:polymer-autohost:0.7.6+1.20.4"
 }
 
 processResources {
