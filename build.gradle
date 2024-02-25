@@ -30,6 +30,7 @@ dependencies {
     modImplementation "eu.pb4:polymer-resource-pack:0.5.19+1.20.1"
     modImplementation "eu.pb4:polymer-blocks:0.5.19+1.20.1"
     modImplementation "eu.pb4:polymer-autohost:0.5.19+1.20.1"
+    modImplementation "eu.pb4:polymer-virtual-entity:0.5.19+1.20.1"
 }
 
 processResources {
