@@ -18,7 +18,7 @@ public class SimpleCustomBlockItem extends BlockItem implements PolymerItem{
 
     public SimpleCustomBlockItem(Settings settings, Block block, String modelId) {
         super(block, settings);
-        this.polymerModel = PolymerResourcePackUtils.requestModel(Items.BARRIER, new Identifier(WlodzimiersBlocks.MOD_ID, modelId));
+        this.polymerModel = PolymerResourcePackUtils.requestModel(Items.BARRIER, Identifier.of(WlodzimiersBlocks.MOD_ID, modelId));
     }
 
     @Override
