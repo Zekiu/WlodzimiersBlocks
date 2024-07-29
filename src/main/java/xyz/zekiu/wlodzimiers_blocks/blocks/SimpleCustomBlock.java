@@ -21,11 +21,11 @@ public class SimpleCustomBlock extends Block implements PolymerTexturedBlock {
 
     public SimpleCustomBlock(Settings settings, BlockModelType type, String modelId) {
         super(settings);
-        this.polymerBlockState = PolymerBlockResourceUtils.requestBlock(type, PolymerBlockModel.of(new Identifier(WlodzimiersBlocks.MOD_ID, modelId)));
+        this.polymerBlockState = PolymerBlockResourceUtils.requestBlock(type, PolymerBlockModel.of(Identifier.of(WlodzimiersBlocks.MOD_ID, modelId)));
     }
 
     private static void register(String modelId, BlockModelType type, AbstractBlock abstractBlock) {
-        var modId = new Identifier(WlodzimiersBlocks.MOD_ID, modelId);
+        var modId = Identifier.of(WlodzimiersBlocks.MOD_ID, modelId);
         var block = Registry.register(Registries.BLOCK, modId,
                 new SimpleCustomBlock(FabricBlockSettings.copy(abstractBlock), type, modelId));
 
@@ -50,11 +50,6 @@ public class SimpleCustomBlock extends Block implements PolymerTexturedBlock {
         register("yellow_kitchen_tiles", BlockModelType.FULL_BLOCK, Blocks.YELLOW_CONCRETE);
 
 //      register("id_bloku", BlockModelType.KSZTALT_BLOKU, Blocks.WLASCIWOSCI_BLOKU_VANILLA);   ||| DLA PROSTYCH BLOKÓW!!! Pamiętaj aby dodać potrzebne pliki .json w folderze assets oraz data!!!!
-    }
-
-    @Override
-    public Block getPolymerBlock(BlockState state) {
-        return this.polymerBlockState.getBlock();
     }
 
     @Override
