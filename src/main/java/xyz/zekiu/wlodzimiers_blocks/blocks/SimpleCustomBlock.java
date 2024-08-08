@@ -16,8 +16,12 @@ import net.minecraft.util.Identifier;
 import xyz.zekiu.wlodzimiers_blocks.WlodzimiersBlocks;
 import xyz.zekiu.wlodzimiers_blocks.items.SimpleCustomBlockItem;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SimpleCustomBlock extends Block implements PolymerTexturedBlock {
     private final BlockState polymerBlockState;
+    public static List<Item> items = new ArrayList<>();
 
     public SimpleCustomBlock(Settings settings, BlockModelType type, String modelId) {
         super(settings);
@@ -28,8 +32,10 @@ public class SimpleCustomBlock extends Block implements PolymerTexturedBlock {
         var modId = Identifier.of(WlodzimiersBlocks.MOD_ID, modelId);
         var block = Registry.register(Registries.BLOCK, modId,
                 new SimpleCustomBlock(FabricBlockSettings.copy(abstractBlock), type, modelId));
+        var item = new SimpleCustomBlockItem(new Item.Settings(), block, modelId);
+        items.add(item);
 
-        Registry.register(Registries.ITEM, modId, new SimpleCustomBlockItem(new Item.Settings(), block, modelId));
+        Registry.register(Registries.ITEM, modId, item);
     }
 
     public static void registerBlocks() {
