@@ -3,20 +3,20 @@ package xyz.zekiu.wlodzimiers_blocks.blocks;
 import org.jetbrains.annotations.Nullable;
 import org.joml.Vector3f;
 
+import com.mojang.serialization.MapCodec;
+
 import eu.pb4.factorytools.api.block.FactoryBlock;
 import eu.pb4.factorytools.api.virtualentity.BlockModel;
 import eu.pb4.factorytools.api.virtualentity.ItemDisplayElementUtil;
-import eu.pb4.polymer.blocks.api.BlockModelType;
 import eu.pb4.polymer.blocks.api.PolymerTexturedBlock;
 import eu.pb4.polymer.core.api.item.PolymerBlockItem;
 import eu.pb4.polymer.virtualentity.api.ElementHolder;
-import eu.pb4.polymer.virtualentity.api.attachment.BlockAwareAttachment;
-import eu.pb4.polymer.virtualentity.api.attachment.HolderAttachment;
 import eu.pb4.polymer.virtualentity.api.elements.ItemDisplayElement;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.BlockWithEntity;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.enums.DoubleBlockHalf;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.Item;
@@ -40,7 +40,7 @@ import net.minecraft.world.tick.ScheduledTickView;
 import xyz.nucleoid.packettweaker.PacketContext;
 import xyz.zekiu.wlodzimiers_blocks.WlodzimiersBlocks;
 
-public class FridgeBlock extends Block implements FactoryBlock, PolymerTexturedBlock {
+public class FridgeBlock extends BlockWithEntity implements FactoryBlock, PolymerTexturedBlock {
     private static final EnumProperty<Direction> FACING = Properties.FACING;
     private static final EnumProperty<DoubleBlockHalf> HALF = Properties.DOUBLE_BLOCK_HALF;
 
@@ -104,13 +104,16 @@ public class FridgeBlock extends Block implements FactoryBlock, PolymerTexturedB
         return Blocks.BARRIER.getDefaultState();
     }
 
-    // @Nullable
-    // @Override
-    // public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-    //     return new FridgeBlockEntity(pos, state);
-    // }
+    @Nullable
+    @Override
+    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+        return new FridgeBlockEntity(pos, state);
+    }
 
-    
+    @Override
+    protected MapCodec<? extends BlockWithEntity> getCodec() {
+        return null;
+    }
 
     @Override
     public @Nullable ElementHolder createElementHolder(ServerWorld world, BlockPos pos, BlockState initialBlockState) {
