@@ -18,12 +18,8 @@ import net.minecraft.util.Identifier;
 import xyz.nucleoid.packettweaker.PacketContext;
 import xyz.zekiu.wlodzimiers_blocks.WlodzimiersBlocks;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class SimpleCustomBlock extends Block implements PolymerTexturedBlock {
     private final BlockState polymerBlockState;
-    public static List<Item> items = new ArrayList<>();
 
     public SimpleCustomBlock(Settings settings, BlockModelType type, String modelId) {
         super(settings);
@@ -35,7 +31,7 @@ public class SimpleCustomBlock extends Block implements PolymerTexturedBlock {
         var block = Registry.register(Registries.BLOCK, id,
                 new SimpleCustomBlock(Block.Settings.copy(abstractBlock).registryKey(RegistryKey.of(RegistryKeys.BLOCK, id)), type, modelId));
         var item = new PolymerBlockItem(block, new Item.Settings().useBlockPrefixedTranslationKey().registryKey(RegistryKey.of(RegistryKeys.ITEM, id)), abstractBlock.asItem(), true);
-        items.add(item);
+        WlodzimiersBlocks.items.add(item);
 
         Registry.register(Registries.ITEM, id, item);
     }
@@ -56,8 +52,6 @@ public class SimpleCustomBlock extends Block implements PolymerTexturedBlock {
         register("purple_kitchen_tiles", BlockModelType.FULL_BLOCK, Blocks.PURPLE_CONCRETE);
         register("red_kitchen_tiles", BlockModelType.FULL_BLOCK, Blocks.RED_CONCRETE);
         register("yellow_kitchen_tiles", BlockModelType.FULL_BLOCK, Blocks.YELLOW_CONCRETE);
-
-//      register("id_bloku", BlockModelType.KSZTALT_BLOKU, Blocks.WLASCIWOSCI_BLOKU_VANILLA);   ||| DLA PROSTYCH BLOKÓW!!! Pamiętaj aby dodać potrzebne pliki .json w folderze assets oraz data!!!!
     }
 
     @Override

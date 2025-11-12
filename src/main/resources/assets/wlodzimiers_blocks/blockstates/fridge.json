@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=east,half=lower": {
+      "model": "wlodzimiers_block:block/fridge_bottom"
+    },
+    "facing=east,half=upper": {
+      "model": "wlodzimiers_block:block/fridge_top"
+    },
+    "facing=north,half=lower": {
+      "model": "wlodzimiers_block:block/fridge_bottom",
+      "y": 270
+    },
+    "facing=north,half=upper": {
+      "model": "wlodzimiers_block:block/fridge_top",
+      "y": 270
+    },
+    "facing=south,half=lower": {
+      "model": ""
+    },
+    "facing=south,half=upper": {
+      "model": ""
+    },
+    "facing=west,half=lower": {
+      "model": ""
+    },
+    "facing=west,half=upper": {
+      "model": ""
+    }
+  }
+}

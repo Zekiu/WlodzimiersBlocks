@@ -31,6 +31,10 @@ dependencies {
     modImplementation "eu.pb4:polymer-resource-pack-extras:${project.polymer_version}"
     modImplementation "eu.pb4:polymer-blocks:${project.polymer_version}"
     modImplementation "eu.pb4:polymer-autohost:${project.polymer_version}"
+    modImplementation "eu.pb4:polymer-virtual-entity:${project.polymer_version}"
+
+    // FactoryTools
+    modImplementation "eu.pb4:factorytools:${project.factorytools_version}"
 }
 
 processResources {
