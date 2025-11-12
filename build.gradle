@@ -46,7 +46,9 @@ processResources {
     filesMatching("fabric.mod.json") {
         expand "version": project.version,
                 "minecraft_version": project.minecraft_version,
-                "loader_version": project.loader_version
+                "loader_version": project.loader_version,
+                "polymer_version": project.polymer_version,
+                "fabric_version": project.fabric_version
     }
 }
 
@@ -86,7 +88,7 @@ modrinth {
     token = System.getenv("MODRINTH_TOKEN")
     projectId = "wlodzimiers-blocks"
     uploadFile = remapJar
-    changelog = rootProject.file("CHANGELOG").text
+    changelog = rootProject.file("CHANGELOG.md").text
     dependencies {
         required.project "fabric-api"
         required.project "polymer"
@@ -98,7 +100,7 @@ curseforge {
         apiKey = System.getenv("CURSEFORGE_API_KEY")
         id = '952794'
         changelogType = 'markdown'
-        changelog = rootProject.file("CHANGELOG").text
+        changelog = rootProject.file("CHANGELOG.md").text
         releaseType = 'release'
         addGameVersion project.minecraft_version
 

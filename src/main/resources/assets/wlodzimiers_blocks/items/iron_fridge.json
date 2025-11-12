@@ -1,7 +1,7 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "wlodzimiers_blocks:item/fridge_item"
+    "model": "wlodzimiers_blocks:item/iron_fridge"
   }
 }
 

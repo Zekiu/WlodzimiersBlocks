@@ -26,11 +26,11 @@ public class SimpleCustomBlock extends Block implements PolymerTexturedBlock {
         this.polymerBlockState = PolymerBlockResourceUtils.requestBlock(type, PolymerBlockModel.of(Identifier.of(WlodzimiersBlocks.MOD_ID, "block/" + modelId)));
     }
 
-    private static void register(String modelId, BlockModelType type, AbstractBlock abstractBlock) {
+    private static void register(String modelId, BlockModelType type, Block mimicBlock) {
         var id = Identifier.of(WlodzimiersBlocks.MOD_ID, modelId);
         var block = Registry.register(Registries.BLOCK, id,
-                new SimpleCustomBlock(Block.Settings.copy(abstractBlock).registryKey(RegistryKey.of(RegistryKeys.BLOCK, id)), type, modelId));
-        var item = new PolymerBlockItem(block, new Item.Settings().useBlockPrefixedTranslationKey().registryKey(RegistryKey.of(RegistryKeys.ITEM, id)), abstractBlock.asItem(), true);
+                new SimpleCustomBlock(Block.Settings.copy(mimicBlock).registryKey(RegistryKey.of(RegistryKeys.BLOCK, id)), type, modelId));
+        var item = new PolymerBlockItem(block, new Item.Settings().useBlockPrefixedTranslationKey().registryKey(RegistryKey.of(RegistryKeys.ITEM, id)));
         WlodzimiersBlocks.items.add(item);
 
         Registry.register(Registries.ITEM, id, item);

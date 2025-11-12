@@ -22,8 +22,8 @@
   },
   "depends": {
     "fabricloader": ">=${loader_version}",
-    "fabric-api": "*",
-    "polymer-core": "*",
+    "fabric-api": ">=${fabric_version}",
+    "polymer-core": ">=${polymer_version}",
     "minecraft": ">=${minecraft_version}"
   }
 }
